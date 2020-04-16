@@ -2,19 +2,11 @@ package main
 
 import (
     "fmt"
-    "net/http"
-    "os"
+    "animals"
 )
 
-func hello(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "hello")
-}
-
 func main() {
-    port := os.Getenv("PORT")
-    if len(port) <= 0 {
-        port = "8888"
-    }
-    http.HandleFunc("/", hello)
-    http.ListenAndServe(":"+port, nil)
+    fmt.Println(animals.ElephantFeed())
+    fmt.Println(animals.MonkeyFeed())
+    fmt.Println(animals.RabbitFeed())
 }

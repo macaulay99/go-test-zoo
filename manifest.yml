@@ -1,9 +1,10 @@
 ---
 applications:
-- name: aftegrow-pcf-tyamamoto
+- name: go-pivotal-plain
   instance: 1
-  memory: 32m
+  memory: 8m
   buildpack: https://github.com/cloudfoundry/go-buildpack.git#v1.9.10
   domain: cfapps.io 
   env:
     GOVERSION: go1.14.1
+    GOPACKAGENAME: github.com/macaulay99/go-pivotal-plain 
